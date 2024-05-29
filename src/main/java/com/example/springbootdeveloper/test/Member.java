@@ -14,4 +14,8 @@ public class Member {
     private Long id;
     @Column(name = "name", nullable = false)
     private String name;
+
+    public void changeName(String name) {
+        this.name = name;
+    }
 }

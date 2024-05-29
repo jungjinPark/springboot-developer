@@ -1,6 +1,9 @@
 spring:
   application:
     name: springboot-developer
+  sql:
+    init:
+      mode: never
   jpa:
     show-sql: true
     properties:
