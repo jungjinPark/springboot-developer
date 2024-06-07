@@ -1,6 +1,8 @@
 spring:
+  application:
+    name: springboot-developer
   datasource:
-    url: jdbc:pools:postgresql://localhost:15432/devdb
+    url: jdbc:postgresql://localhost:15432/devdb
     username: myuser
     password: mypassword
     driver-class-name: org.postgresql.Driver
@@ -17,7 +19,7 @@ spring:
       database: 0
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
@@ -26,7 +28,6 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        default_schema: devdb
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
 
