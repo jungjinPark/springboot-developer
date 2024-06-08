@@ -20,4 +20,8 @@ public class UserService {
                 .password(passwordEncoder.encode(dto.getPassword()))
                 .build()).getId();
     }
+
+    public User findById(Long id) {
+        return userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
+    }
 }
